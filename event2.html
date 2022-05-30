@@ -93,22 +93,37 @@
         //     box_3.classList.toggle('on');
         // })
 
-        // A2.
+        // // A2.
 
-        const box_1 = document.querySelector('.box_1');
-        const box_2 = document.querySelector('.box_2');
-        const box_3 = document.querySelector('.box_3');
+        // const box_1 = document.querySelector('.box_1');
+        // const box_2 = document.querySelector('.box_2');
+        // const box_3 = document.querySelector('.box_3');
 
-        box_1.addEventListener('click', () => box_1.classList.toggle('on'));
+        // box_1.addEventListener('click', () => box_1.classList.toggle('on'));
         
 
-        box_2.addEventListener('click', () => box_2.classList.toggle('on'));
+        // box_2.addEventListener('click', () => box_2.classList.toggle('on'));
         
 
-        box_3.addEventListener('click', () => box_3.classList.toggle('on'));
+        // box_3.addEventListener('click', () => box_3.classList.toggle('on'));
 
-        })();
+        // A3.
+        
+        const boxAll = document.querySelectorAll('.box')
 
+        boxAll[0].addEventListener('click', () => {
+            boxAll[0].classList.toggle('on');
+        });
+
+        boxAll[1].addEventListener('click', () => {
+            boxAll[1].classList.toggle('on');
+        });
+
+        boxAll[2].addEventListener('click', () => {
+            boxAll[2].classList.toggle('on');
+        });
+
+    })();
     </script>
 
 </body>
