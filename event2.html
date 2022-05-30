@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+
     <style>
 
         *{margin: 0; padding: 0;}
@@ -56,25 +57,7 @@
     <button class="add_color">색상넣기</button>
     <button class="remove_color">색상빼기</button>
 
-    <script>
-
-        // *Q1.색상넣기 버튼 클릭 시 con에 색상추가, 색상빼기 버튼 클릭 시 con에 색상 빼기
-
-        const conEl = document.querySelector('.con')
-        const addBtn = document.querySelector('.add_color')
-        const removeBtn = document.querySelector('.remove_color')
-        
-        const handleClick1 = () => {
-            conEl.classList.add('on')
-        }
-        const handleClick2 = () => {
-            conEl.classList.remove('on')
-        }
-
-        addBtn.addEventListener('click', handleClick1)
-        removeBtn.addEventListener('click', handleClick2)
-
-    </script>
-
+    <script src="js/btnEvent.js"></script>
+    <!-- =>외부로 스크립트를 뺐을 때 <script></script> 내부에 아무것도 작성하면 안됨 -->
 </body>
 </html>
