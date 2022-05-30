@@ -48,9 +48,9 @@
 <body>
 
     <div class="box_wrap">
-        <div class="box">1</div>
-        <div class="box">2</div>
-        <div class="box">3</div>
+        <div class="box box_1">1</div>
+        <div class="box box_2">2</div>
+        <div class="box box_3">3</div>
     </div>
 
     <div class="con"></div>
@@ -63,16 +63,35 @@
     <script>
 
         (function(){
-           // *Q2.세개 박스에 클릭 시 on클래스 추가, 클래스가 추가가 되어있으면 제거, 없으면 추가.
+        //  *Q2.세개 박스에 클릭 시 on클래스 추가, 클래스가 추가가 되어있으면 제거, 없으면 추가.
 
-           const boxEl = document.querySelectorAll('.box');
-           const handleClick = () => {
-               for(let i = 0; i<3; i++){
-                boxEl[i].classList.toggle('on');
-               }
-           }
+        //    const boxEl = document.querySelectorAll('.box');
+        //    const handleClick = () => {
+        //        for(let i = 0; i<3; i++){
+        //         boxEl[i].classList.toggle('on');
+        //        }
+        //    }
 
-           for(let a = 0; a<3; a++){boxEl[a].addEventListener('click', handleClick);}
+        //    for(let a = 0; a<3; a++){boxEl[a].addEventListener('click', handleClick);}
+
+
+        // A1.
+
+        const box_1 = document.querySelector('.box_1');
+        const box_2 = document.querySelector('.box_2');
+        const box_3 = document.querySelector('.box_3');
+
+        box_1.addEventListener('click', () => {
+            box_1.classList.toggle('on');
+        })
+
+        box_2.addEventListener('click', () => {
+            box_2.classList.toggle('on');
+        })
+
+        box_3.addEventListener('click', () => {
+            box_3.classList.toggle('on');
+        })
 
         })();
 
