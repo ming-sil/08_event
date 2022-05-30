@@ -1,4 +1,5 @@
-
+(function(){
+    
 // *Q1.색상넣기 버튼 클릭 시 con에 색상추가, 색상빼기 버튼 클릭 시 con에 색상 빼기
 
 const conEl = document.querySelector('.con');
@@ -14,3 +15,5 @@ const handleClick2 = () => {
 
 addBtn.addEventListener('click', handleClick1);
 removeBtn.addEventListener('click', handleClick2);
+
+})();
