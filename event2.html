@@ -62,10 +62,17 @@
 
     <script>
 
-        (() => {
+        (function(){
            // *Q2.세개 박스에 클릭 시 on클래스 추가, 클래스가 추가가 되어있으면 제거, 없으면 추가.
 
-           
+           const boxEl = document.querySelectorAll('.box');
+           const handleClick = () => {
+               for(let i = 0; i<3; i++){
+                boxEl[i].classList.toggle('on');
+               }
+           }
+
+           for(let a = 0; a<3; a++){boxEl[a].addEventListener('click', handleClick);}
 
         })();
 
