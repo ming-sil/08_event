@@ -41,6 +41,42 @@
         .on{
             background-color: steelblue;
         }
+
+
+
+        .popUp_ready{
+            width: 300px;
+            height: 400px;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .popUp{
+            width: 200px;
+            height: 300px;
+            background-color: tomato;
+            font-size: 30px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: -350px; left: 150px;
+        }
+
+        .exit{
+            font-weight: 900;
+            position: absolute;
+            top: 10%; left: 10%;
+            cursor: pointer;
+        }
+        
+        .close{
+            display: none;
+        }
         
     </style>
 
@@ -56,6 +92,12 @@
     <div class="con"></div>
     <button class="add_color">색상넣기</button>
     <button class="remove_color">색상빼기</button>
+
+    <div class="popUp_ready">Click here!</div>
+    <div class="popUp close">
+        Hello~!
+        <div class="exit">X</div>
+    </div>
 
     <script src="js/btnEvent.js"></script>
     <!-- =>외부로 스크립트를 뺐을 때 <script></script> 내부에 아무것도 작성하면 안됨 -->
@@ -107,21 +149,39 @@
 
         // box_3.addEventListener('click', () => box_3.classList.toggle('on'));
 
-        // A3.
+        // // A3.
         
-        const boxAll = document.querySelectorAll('.box')
+        // const boxAll = document.querySelectorAll('.box')
 
-        boxAll[0].addEventListener('click', () => {
-            boxAll[0].classList.toggle('on');
-        });
+        // boxAll[0].addEventListener('click', () => {
+        //     boxAll[0].classList.toggle('on');
+        // });
 
-        boxAll[1].addEventListener('click', () => {
-            boxAll[1].classList.toggle('on');
-        });
+        // boxAll[1].addEventListener('click', () => {
+        //     boxAll[1].classList.toggle('on');
+        // });
 
-        boxAll[2].addEventListener('click', () => {
-            boxAll[2].classList.toggle('on');
-        });
+        // boxAll[2].addEventListener('click', () => {
+        //     boxAll[2].classList.toggle('on');
+        // });
+
+
+
+        // Home work: for문을 이용하여 개선하기 + 팝업창 만들기
+
+        const boxAll = document.querySelectorAll('.box');
+
+        for(let i = 0; i < boxAll.length; i++){
+            boxAll[i].addEventListener('click', () => {boxAll[i].classList.toggle('on');});
+        }
+
+
+        const boxEl = document.querySelector('.popUp_ready');
+        const popUp = document.querySelector('.popUp');
+        const btn = document.querySelector('.exit');
+
+        boxEl.addEventListener('click', () => popUp.classList.remove('close'));
+        btn.addEventListener('click', () => popUp.classList.add('close'));
 
     })();
     </script>
